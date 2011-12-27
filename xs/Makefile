@@ -18,7 +18,7 @@
 #     INC => q[-I. -I/home/ingy/src/git-xs-pm/xs/libgit2/include]
 #     LIBS => [q[-L/home/ingy/src/git-xs-pm/xs/libgit2/build -lgit2]]
 #     NAME => q[Git::XS]
-#     OBJECT => q[XS.o]
+#     OBJECT => q[xs_helpers.o XS.o]
 #     PREREQ_PM => {  }
 
 # --- MakeMaker post_initialize section:
@@ -152,7 +152,7 @@ PARENT_NAME = Git
 DLBASE = $(BASEEXT)
 VERSION_FROM = 
 INC = -I. -I/home/ingy/src/git-xs-pm/xs/libgit2/include
-OBJECT = XS$(OBJ_EXT)
+OBJECT = xs_helpers$(OBJ_EXT) XS$(OBJ_EXT)
 LDFROM = $(OBJECT)
 LINKTYPE = dynamic
 BOOTDEP = 
@@ -160,10 +160,12 @@ BOOTDEP =
 # Handy lists of source code files:
 XS_FILES = XS.xs
 C_FILES  = XS.c \
-	helpers.c
+	xs_helpers.c
 O_FILES  = XS.o \
-	helpers.o
-H_FILES  = ppport.h
+	xs_helpers.o
+H_FILES  = ppport.h \
+	xs_helpers.h \
+	xs_object_magic.h
 MAN1PODS = 
 MAN3PODS = 
 

@@ -48,6 +48,19 @@ programs in your PATH:
 
 In the future, this module might use your system's copy of libgit2.
 
+=head1 METHODS
+
+=over
+
+=item Git::XS->new(repo => $repo)
+
+Create a new Git::XS object for dealing with a git repository.
+
+=item $git->init([-bare])
+
+Initialize a repo if it doesn't exist. You can pass '-bare' to create a bare
+repo.
+
 =head1 AUTHOR
 
 Ingy döt Net <ingy@cpan.org>

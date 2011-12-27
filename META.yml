@@ -29,4 +29,4 @@ resources:
     type: git
     url: git://github.com/ingydotnet/git-xs-pm.git
     web: https://github.com/ingydotnet/git-xs-pm/tree
-version: 0.01
+version: 0.02

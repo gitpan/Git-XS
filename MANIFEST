@@ -20,7 +20,6 @@ README
 t/common.yaml
 t/init.t
 t/use_ok.t
-xs/helpers.c
 xs/libgit2/.gitattributes
 xs/libgit2/.HEADER
 xs/libgit2/api.docurium
@@ -577,3 +576,6 @@ xs/Makefile.PL
 xs/ppport.h
 xs/t/test.t
 xs/XS.xs
+xs/xs_helpers.c
+xs/xs_helpers.h
+xs/xs_object_magic.h

@@ -38,11 +38,13 @@ my $obj_files = join ' ', map {
     $c =~ s/\.c$/$Config::Config{_o}/;
     $c;
 }
-# glob("*.c"),
+glob("*.c"),
 'XS.c';
 
 WriteMakefile(
     NAME => 'Git::XS',
+    # CCFLAGS => '-ansi -pedantic -Wall',
+    # CCFLAGS => '-ansi -Wall',
     PREREQ_PM => {},
     LIBS => ["-L$libgit2_build -lgit2"],
     INC => "-I. -I$libgit2_inc",
